@@ -16,6 +16,8 @@ This API from "Facebook for developers" is followed while implementing the plugi
 
 [Sharing to Stories](https://developers.facebook.com/docs/instagram/sharing-to-stories)
 
+If the community asks for it, we can add functionality for editable stickers in Instagram stories to be passed from Flutter
+
 **This plugin is only for iOS**
 
 PR's for Android offering same functionality are welcome
