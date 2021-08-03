@@ -2,6 +2,20 @@
 
 A Flutter Plugin for iOS which shares a video file to be posted as an Instagram Story
 
+We needed a way to share videos for our social media app in Instagram stories like TikTok is doing but we could not find a plugin which allows this.
+
+You can check the live functionality by installing our app
+
+[Sponty: Spontaneous social gatherings](https://sponty.app/#/)
+
+![Sponty Logo](pics/sponty.png)
+
+All the others supported images and the ones supporting videos were only sharing to Instagram Feed and not Stories.
+
+This API from "Facebook for developers" is followed while implementing the plugin:
+
+[Sharing to Stories](https://developers.facebook.com/docs/instagram/sharing-to-stories)
+
 **This plugin is only for iOS**
 
 PR's for Android offering same functionality are welcome
