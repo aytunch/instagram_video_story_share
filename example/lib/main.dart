@@ -44,65 +44,71 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Share video to Instagram Stories"),
+    return MaterialApp(
+      title: 'Share Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              isLoading
-                  ? "Loading..."
-                  : isShared
-                      ? "SHARED"
-                      : "not shared yet",
-            ),
-            TextButton(
-              onPressed: () async {
-                print("checking if instagram is installed");
-                try {
-                  bool result =
-                      await InstagramVideoStoryShare.instagramInstalled;
-                  print("instagramInstalled: $result");
-                  if (!mounted) return;
-                  setState(() {
-                    instagramInstalled = result;
-                  });
-                } on PlatformException catch (e) {
-                  print("ERROR: $e");
-                }
-              },
-              child: Text("Check if Instagram is installed"),
-            ),
-            Text(
-              instagramInstalled ? "Instagram Installed" : "Check first..",
-            ),
-          ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Share video to Instagram Stories"),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          setState(() {
-            isLoading = true;
-          });
-          String videoPath = await videoFilePath();
-          print("videoPath: $videoPath");
-          try {
-            bool result =
-                await InstagramVideoStoryShare.share(videoPath: videoPath);
-            print("result: $result");
-            if (!mounted) return;
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                isLoading
+                    ? "Loading..."
+                    : isShared
+                        ? "SHARED"
+                        : "not shared yet",
+              ),
+              TextButton(
+                onPressed: () async {
+                  print("checking if instagram is installed");
+                  try {
+                    bool result =
+                        await InstagramVideoStoryShare.instagramInstalled;
+                    print("instagramInstalled: $result");
+                    if (!mounted) return;
+                    setState(() {
+                      instagramInstalled = result;
+                    });
+                  } on PlatformException catch (e) {
+                    print("ERROR: $e");
+                  }
+                },
+                child: Text("Check if Instagram is installed"),
+              ),
+              Text(
+                instagramInstalled ? "Instagram Installed" : "Check first..",
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () async {
             setState(() {
-              isShared = result;
-              isLoading = false;
+              isLoading = true;
             });
-          } on PlatformException catch (e) {
-            print("ERROR: $e");
-          }
-        },
-        child: Icon(Icons.video_call),
+            String videoPath = await videoFilePath();
+            print("videoPath: $videoPath");
+            try {
+              bool result =
+                  await InstagramVideoStoryShare.share(videoPath: videoPath);
+              print("result: $result");
+              if (!mounted) return;
+              setState(() {
+                isShared = result;
+                isLoading = false;
+              });
+            } on PlatformException catch (e) {
+              print("ERROR: $e");
+            }
+          },
+          child: Icon(Icons.video_call),
+        ),
       ),
     );
   }

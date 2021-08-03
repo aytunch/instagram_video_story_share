@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - instagram_video_story_share (0.0.1):
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - instagram_video_story_share (from `.symlinks/plugins/instagram_video_story_share/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  instagram_video_story_share:
+    :path: ".symlinks/plugins/instagram_video_story_share/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  instagram_video_story_share: 80672d745dcf4e8019845e003ae032665a2be7f2
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
