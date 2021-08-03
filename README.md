@@ -10,7 +10,7 @@ You can check the live functionality by installing our app
 
 ![Sponty Logo](pics/sponty.png)
 
-All the others supported images and the ones supporting videos were only sharing to Instagram Feed and not Stories.
+All the other plugins supported images and the ones supporting videos were only sharing to Instagram Feed and not Stories.
 
 This API from "Facebook for developers" is followed while implementing the plugin:
 
@@ -53,7 +53,7 @@ To share a video in your Instagram Stories:
 bool success = await InstagramVideoStoryShare.share(videoPath: myVideoPath);
 ```
 
-To get the video path you might need to use path_provider package as seen in the example project:
+To get the video path you might need to use `path_provider` package as seen in the example project:
 
 ```
   # in your pubspec.yaml file add this:
