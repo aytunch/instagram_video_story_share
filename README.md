@@ -53,7 +53,7 @@ To share a video in your Instagram Stories:
 bool success = await InstagramVideoStoryShare.share(videoPath: myVideoPath);
 ```
 
-To get the video path you might need to use path_provider package as seen in the example project:
+To get the video path you might need to use `path_provider` package as seen in the example project:
 
 ```
   # in your pubspec.yaml file add this:
