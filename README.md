@@ -39,7 +39,15 @@ bool success = await InstagramVideoStoryShare.share(videoPath: myVideoPath);
 
 To get the video path you might need to use path_provider package as seen in the example project:
 
+```
+  # in your pubspec.yaml file add this:
+  path_provider: ^2.0.2
+```
+
 ```dart
+  import 'dart:io';
+  import 'package:path_provider/path_provider.dart';
+
   Future<String> videoFilePath() async {
     ByteData bytes = await rootBundle.load("assets/$videoName");
     String dir = (await getApplicationDocumentsDirectory()).path;
