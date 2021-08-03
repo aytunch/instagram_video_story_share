@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+- You can check if instagram is installed and share a video as an instagram story for iOS
