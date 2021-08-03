@@ -54,15 +54,15 @@ public class SwiftInstagramVideoStorySharePlugin: NSObject, FlutterPlugin {
             }
             print("resultDictionary: \(resultDictionary)")
             result(resultDictionary)
-    case "isInstagramInstalled" :
-        let instagramUrl = URL(string: "instagram-stories://share")
-        if UIApplication.shared.canOpenURL(instagramUrl!) {
-            result(true)
-        } else {
-            result(false)
-        }
-    default :
-        result(FlutterMethodNotImplemented)
+        case "isInstagramInstalled" :
+            let instagramUrl = URL(string: "instagram-stories://share")
+            if UIApplication.shared.canOpenURL(instagramUrl!) {
+                result(true)
+            } else {
+                result(false)
+            }
+        default :
+            result(FlutterMethodNotImplemented)
     }
   }
 }
