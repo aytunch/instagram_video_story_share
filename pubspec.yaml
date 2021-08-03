@@ -1,6 +1,6 @@
 name: instagram_video_story_share
 description: A flutter plugin for iOS which shares a video file as an Instagram Story
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/aytunch/instagram_video_story_share.git
 
 environment:
