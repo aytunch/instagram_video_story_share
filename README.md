@@ -10,7 +10,7 @@ You can check the live functionality by installing our app
 
 ![Sponty Logo](pics/sponty.png)
 
-All the others supported images and the ones supporting videos were only sharing to Instagram Feed and not Stories.
+All the other plugins supported images and the ones supporting videos were only sharing to Instagram Feed and not Stories.
 
 This API from "Facebook for developers" is followed while implementing the plugin:
 
